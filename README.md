@@ -4,6 +4,7 @@
 
 This workflow takes an input CRAM to call variants with HaplotypeCaller
 then filters the calls with the CNNVariant neural net tool.
+
 The site-level scores are added to the INFO field of the VCF. The architecture arguments, 
 info_key and tensor type arguments MUST be in agreement (e.g. 2D models must have 
 tensor_type of read_tensor and info_key CNN_2D, 1D models have tensor_type 
@@ -13,6 +14,8 @@ specify pre-trained networks. New networks can be trained by the
 GATK tools: CNNVariantWriteTensors and CNNVariantTrain. The CRAM could be generated 
 by the [single-sample pipeline] (https://github.com/gatk-workflows/gatk4-data-processing/blob/master/processing-for-variant-discovery-gatk4.wdl)
 Also accepts a BAM as the input file in which case a BAM index is required as well.
+
+Please read the following discussion to learn more about the CNN tool: [Deep Learning in GATK4](https://gatkforums.broadinstitute.org/gatk/discussion/10996/deep-learning-in-gatk4)
 
 ### Requirements/expectations :
  - CRAM/BAM
@@ -27,7 +30,7 @@ Also accepts a BAM as the input file in which case a BAM index is required as we
 - For help running workflows on the Google Cloud Platform or locally please
 view the following tutorial [(How to) Execute Workflows from the gatk-workflows Git Organization](https://software.broadinstitute.org/gatk/documentation/article?id=12521).
 - Please post questions to the [GATK forum](https://gatkforums.broadinstitute.org/gatk/categories/ask-the-team).
-- Please visit the [User Guide](https://software.broadinstitute.org/gatk/documentation/) site for more documentation on our workflows and tools. 
+- Please visit our [User Guide](https://software.broadinstitute.org/gatk/documentation/) documentation on workflows and tools. 
 
 ### LICENSING :
  This script is released under the WDL source code license (BSD-3) (see LICENSE in
