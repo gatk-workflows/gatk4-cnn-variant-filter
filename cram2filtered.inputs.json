@@ -13,7 +13,8 @@
 
   "##_COMMENT3": "Workflow Parameters",
   "Cram2FilteredVcf.info_key": "CNN_2D",
-  "Cram2FilteredVcf.tranches": "--snp-tranche 99.9 --indel-tranche 99.0",
+  "Cram2FilteredVcf.snp_tranches": " --snp-tranche 99.9 ",
+  "Cram2FilteredVcf.indel_tranches": " --indel-tranche 99.5 ",
   "Cram2FilteredVcf.tensor_type":"read_tensor",
   "Cram2FilteredVcf.extra_args": "--dont-trim-active-regions -stand-call-conf 0 -A Coverage -A ChromosomeCounts -A BaseQuality -A FragmentLength -A MappingQuality -A ReadPosition ",
   "Cram2FilteredVcf.scatter_count": 4,
