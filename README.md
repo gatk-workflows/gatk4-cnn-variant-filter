@@ -2,7 +2,7 @@
 
 ### Purpose :
 This workflow takes an input CRAM/BAM to call variants with HaplotypeCaller
-then filters the calls with the CNNVariant neural net tool.
+then filters the calls with the CNNVariant neural net tool using the filtering model specified.
 
 The site-level scores are added to the `INFO` field of the VCF. The architecture arguments,
 `info_key` and `tensor_type` arguments MUST be in agreement (e.g. 2D models must have
