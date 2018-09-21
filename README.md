@@ -47,6 +47,8 @@ An evaluation and plotting workflow that runs the a filtering model against trut
  - Truth VCF
 
 #### Output :
+ - Evaluation summary
+ - Plots
 
 ### Important Note :
 - Runtime parameters are optimized for Broad's Google Cloud Platform implementation. 
