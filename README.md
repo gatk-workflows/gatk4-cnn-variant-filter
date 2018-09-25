@@ -41,7 +41,7 @@ This optional workflow is for advanced users who would like to train a CNN model
  - Model Plots PNG
 
 ### run_happy.wdl
-An evaluation and plotting workflow that runs the a filtering model against truth data (e.g. [NIST Genomes in a Bottle](https://github.com/genome-in-a-bottle/giab_latest_release), [Synthic Diploid Truth Set](https://github.com/lh3/CHM-eval/releases) ) and plots the accuracy.
+This optional evaluation and plotting workflow runs a filtering model against truth data (e.g. [NIST Genomes in a Bottle](https://github.com/genome-in-a-bottle/giab_latest_release), [Synthic Diploid Truth Set](https://github.com/lh3/CHM-eval/releases) ) and plots the accuracy.
 
 #### Requirements/expectations :
  - File of VCF Files
