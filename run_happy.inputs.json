@@ -9,7 +9,7 @@
   "HappyWorkflow.truth_vcf": "File",
   "HappyWorkflow.truth_vcf_index": "File",
   "HappyWorkflow.truth_bed": "File",
-  "HappyWorkflow.rscript": "File",
+  "HappyWorkflow.rscript": "gs://gatk-best-practices/cnn-h38/happy_plot.R",
   
   "##_COMMENT1": "RAM",
   "#HappyWorkflow.RunHappyPlots.default_ram_mb": "Int (optional, default = 16000)",

@@ -25,26 +25,28 @@ CRAM file as input and change the scatter count from 4 to 200: gs://gatk-best-pr
  - BAM Index (if input is BAM) 
 
 #### Output :
- - Filtered VCF 
- - Filtered VCF index. 
+ - Filtered VCF and its index. 
 
 ### cram2model.wdl
-Creates a filtering model to be used in the cram2filtered workflow.
+This optional workflow is for advanced users who would like to train a CNN model for filtering variants. 
 
 #### Requirements/expectations :
  - CRAM
- - Truth VCF
+ - Truth VCF and its index
+ - Truth Confidence Interval Bed
 
 #### Output :
  - Model HD5
  - Model JSON
+ - Model Plots PNG
 
 ### run_happy.wdl
-An evaluation and plotting workflow that runs the a filtering model against truth data (e.g. NIST Genomes in a Bottle) and plots the accuracy.
+An evaluation and plotting workflow that runs the a filtering model against truth data (e.g. [NIST Genomes in a Bottle](https://github.com/genome-in-a-bottle/giab_latest_release), [Synthic Diploid Truth Set](https://github.com/lh3/CHM-eval/releases) ) and plots the accuracy.
 
 #### Requirements/expectations :
  - File of VCF Files
- - Truth VCF
+ - Truth VCF and its index
+ - Truth Confidence Interval Bed
 
 #### Output :
  - Evaluation summary
