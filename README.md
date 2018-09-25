@@ -57,7 +57,7 @@ This optional evaluation and plotting workflow runs a filtering model against tr
 - For help running workflows on the Google Cloud Platform or locally please
 view the following tutorial [(How to) Execute Workflows from the gatk-workflows Git Organization](https://software.broadinstitute.org/gatk/documentation/article?id=12521).
 - Please post questions to the [GATK forum](https://gatkforums.broadinstitute.org/gatk/categories/ask-the-team).
-- Please visit our [User Guide](https://software.broadinstitute.org/gatk/documentation/) documentation on workflows and tools. 
+- Please visit our [User Guide](https://software.broadinstitute.org/gatk/documentation/) site for further documentation on workflows and tools. 
 
 ### LICENSING :
  This script is released under the WDL source code license (BSD-3) (see LICENSE in
