@@ -12,7 +12,7 @@ workflow Cram2TrainedModel {
     File truth_bed
     String output_prefix
     String tensor_type
-    Int epochs
+    Int? epochs
     File calling_intervals
     Int scatter_count
     String extra_args
@@ -175,7 +175,8 @@ task TrainModel {
     Array[File] tar_tensors
     String output_prefix
     String tensor_type
-    Int epochs
+    Int? epochs
+    Int set_epochs = select_first([epochs, 100])
 
     # Runtime parameters
     File? gatk_override
@@ -195,7 +196,7 @@ task TrainModel {
         -model-name ${output_prefix} \
         -image-dir "./" \
         -tensor-type ${tensor_type} \
-        -epochs ${epochs}
+        -epochs ${set_epochs}
     }
 
     output {
