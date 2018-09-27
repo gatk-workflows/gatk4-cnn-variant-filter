@@ -5,7 +5,7 @@
   "##_COMMENT1": "Paramaters",
   "Cram2TrainedModel.output_prefix": "String",
   "Cram2TrainedModel.scatter_count": "Int",
-  "Cram2TrainedModel.epochs": "Int",
+  "#Cram2TrainedModel.epochs": "Int? (optional)",
   "Cram2TrainedModel.tensor_type": "String",
   "#Cram2TrainedModel.extra_args": "String",
   "#Cram2TrainedModel.RunHC4.default_ram_mb": "Int (optional, default = 8000)",
