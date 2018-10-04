@@ -1,7 +1,7 @@
 # gatk4-cnn-variant-filter
 
 ### Purpose :
-This repo provides workflows that takes advangate of GATKs CNN tool which a deep learning 
+This repo provides workflows that takes advangate of GATKs CNN tool which is a deep learning 
 approach to filter variants based on Convolutional Neural Networks. 
 
 Please read the following discussion to learn more about the CNN tool: [Deep Learning in GATK4](https://gatkforums.broadinstitute.org/gatk/discussion/10996/deep-learning-in-gatk4).
