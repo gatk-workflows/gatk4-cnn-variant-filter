@@ -1,0 +1,55 @@
+{
+  "##_COMMENT1": "Input",
+  "Cram2TrainedModel.input_cram": "File",
+  
+  "##_COMMENT1": "Paramaters",
+  "Cram2TrainedModel.output_prefix": "String",
+  "Cram2TrainedModel.scatter_count": "Int",
+  "#Cram2TrainedModel.epochs": "Int? (optional)",
+  "Cram2TrainedModel.tensor_type": "String",
+  "#Cram2TrainedModel.extra_args": "String",
+  "#Cram2TrainedModel.RunHC4.default_ram_mb": "Int (optional, default = 8000)",
+  "#Cram2TrainedModel.CramToBam.default_ram_mb": "Int (optional, default = 16000)",
+  "#Cram2TrainedModel.SplitIntervals.split_intervals_extra_args": "String? (optional)",
+
+  "##_COMMENT1": "References and Resources",
+  "Cram2TrainedModel.truth_vcf": "File",
+  "Cram2TrainedModel.truth_vcf_index": "File",
+  "Cram2TrainedModel.truth_bed": "File",
+  "Cram2TrainedModel.calling_intervals": "File",
+  "Cram2TrainedModel.reference_fasta": "File",
+  "Cram2TrainedModel.reference_fasta_index": "File",
+  "Cram2TrainedModel.reference_dict": "File",
+
+  "##_COMMENT1": "Docker",
+  "Cram2TrainedModel.gatk_docker": "samfriedman/gatk:44dc3d18e0e204",
+  "Cram2TrainedModel.gatk_override": "gs://gatk-best-practices/cnn-h38/sf_gatk2.jar",
+  
+  "##_COMMENT1": "Diskspace",
+  "Cram2TrainedModel.SamtoolsMergeBAMs.disk_space_gb": "Int",
+  "#Cram2TrainedModel.disk_space_gb": "Int? (optional)",
+  "#Cram2TrainedModel.MergeVCF_HC4.default_disk_space_gb": "Int (optional, default = 100)",
+  "#Cram2TrainedModel.SplitIntervals.disk_space": "Int? (optional)",
+
+  "##_COMMENT1": "CPUs",
+  "#Cram2TrainedModel.MergeVCF_HC4.cpu": "Int? (optional)",
+  "#Cram2TrainedModel.TrainModel.cpu": "Int? (optional)",
+  "#Cram2TrainedModel.RunHC4.cpu": "Int? (optional)",
+  "#Cram2TrainedModel.CramToBam.cpu": "Int? (optional)",
+  "#Cram2TrainedModel.SplitIntervals.cpu": "Int? (optional)",
+  "#Cram2TrainedModel.cpu": "Int? (optional)",
+  "#Cram2TrainedModel.WriteTensors.cpu": "Int? (optional)",
+
+  "##_COMMENT1": "Memory",
+  "#Cram2TrainedModel.MergeVCF_HC4.mem": "Int? (optional)",
+  "#Cram2TrainedModel.SplitIntervals.mem": "Int? (optional)",
+  "#Cram2TrainedModel.TrainModel.mem_gb": "Int? (optional)",
+  "#Cram2TrainedModel.CramToBam.mem_gb": "Int? (optional)",
+  "#Cram2TrainedModel.WriteTensors.mem_gb": "Int? (optional)",
+  "#Cram2TrainedModel.RunHC4.mem_gb": "Int? (optional)",
+  "#Cram2TrainedModel.mem_gb": "Int? (optional)",
+
+  "##_COMMENT1": "Preemptibles",
+  "#Cram2TrainedModel.preemptible_attempts": "Int? (optional)",
+  "#Cram2TrainedModel.TrainModel.preemptible_attempts": "Int? (optional)"
+}
