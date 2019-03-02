@@ -10,7 +10,7 @@
 # (https://github.com/gatk-workflows/gatk4-data-processing/blob/master/processing-for-variant-discovery-gatk4.wdl)
 # Also accepts a BAM as the input file in which case a BAM index is required as well.
 
-import "cnn_variant_common_tasks.wdl" as CNNTasks
+import "https://raw.githubusercontent.com/gatk-workflows/gatk4-cnn-variant-filter/1.1.0/tasks/cnn_variant_common_tasks.wdl" as CNNTasks
 
 workflow Cram2FilteredVcf {
     File input_file                  # Aligned CRAM file or Aligned BAM files

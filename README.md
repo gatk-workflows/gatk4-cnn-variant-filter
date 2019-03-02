@@ -52,17 +52,24 @@ This optional evaluation and plotting workflow runs a filtering model against tr
  - Evaluation summary
  - Plots
 
+### Software version notes :
+- GATK 4.1 
+- samtools 1.3.1
+- Cromwell version support 
+  - Successfully tested on v37 
+  - Does not work on versions < v23 due to output syntax
+
 ### Important Note :
-- Runtime parameters are optimized for Broad's Google Cloud Platform implementation. 
+- The provided JSON is meant to be a ready to use example JSON template of the workflow. It is the user’s responsibility to correctly set the reference and resource input variables using the [GATK Tool and Tutorial Documentations](https://software.broadinstitute.org/gatk/documentation/).
+- Relevant reference and resources bundles can be accessed in [Resource Bundle](https://software.broadinstitute.org/gatk/download/bundle).
+- Runtime parameters are optimized for Broad's Google Cloud Platform implementation.
 - For help running workflows on the Google Cloud Platform or locally please
 view the following tutorial [(How to) Execute Workflows from the gatk-workflows Git Organization](https://software.broadinstitute.org/gatk/documentation/article?id=12521).
-- Please post questions to the [GATK forum](https://gatkforums.broadinstitute.org/gatk/categories/ask-the-team).
-- Please visit our [User Guide](https://software.broadinstitute.org/gatk/documentation/) site for further documentation on workflows and tools. 
+- The following material is provided by the GATK Team. Please post any questions or concerns to one of our forum sites : [GATK](https://gatkforums.broadinstitute.org/gatk/categories/ask-the-team/) , [FireCloud](https://gatkforums.broadinstitute.org/firecloud/categories/ask-the-firecloud-team) or [Terra](https://broadinstitute.zendesk.com/hc/en-us/community/topics/360000500432-General-Discussion) , [WDL/Cromwell](https://gatkforums.broadinstitute.org/wdl/categories/ask-the-wdl-team).
+- Please visit the [User Guide](https://software.broadinstitute.org/gatk/documentation/) site for further documentation on our workflows and tools.
 
 ### LICENSING :
  This script is released under the WDL source code license (BSD-3) (see LICENSE in
  https://github.com/broadinstitute/wdl). Note however that the programs it calls may
  be subject to different licenses. Users are responsible for checking that they are
- authorized to run all programs before running this script. Please see the docker
- page at https://hub.docker.com/r/broadinstitute/genomes-in-the-cloud/ for detailed
- licensing information pertaining to the included programs. 
+ authorized to run all programs before running this script.

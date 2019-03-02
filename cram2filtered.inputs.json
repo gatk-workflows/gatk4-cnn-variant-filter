@@ -22,7 +22,7 @@
   "Cram2FilteredVcf.transfer_batch_size": 32,
 
   "##_COMMENT4": "Runtime Attributes",
-  "Cram2FilteredVcf.gatk_docker": "broadinstitute/gatk",
+  "Cram2FilteredVcf.gatk_docker": "broadinstitute/gatk:4.1.0.0",
   "Cram2FilteredVcf.preemptible_attempts": 10,
   "Cram2FilteredVcf.mem_gb": 7
 }
