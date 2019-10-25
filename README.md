@@ -28,7 +28,7 @@ CRAM file as input and change the scatter count from 4 to 200: gs://gatk-best-pr
  - Filtered VCF and its index. 
 
 ### cram2model.wdl
-This optional workflow is for advanced users who would like to train a CNN model for filtering variants. 
+This **optional** workflow is for advanced users who would like to train a CNN model for filtering variants. 
 
 #### Requirements/expectations :
  - CRAM
@@ -41,7 +41,7 @@ This optional workflow is for advanced users who would like to train a CNN model
  - Model Plots PNG
 
 ### run_happy.wdl
-This optional evaluation and plotting workflow runs a filtering model against truth data (e.g. [NIST Genomes in a Bottle](https://github.com/genome-in-a-bottle/giab_latest_release), [Synthic Diploid Truth Set](https://github.com/lh3/CHM-eval/releases) ) and plots the accuracy.
+This **optional** evaluation and plotting workflow runs a filtering model against truth data (e.g. [NIST Genomes in a Bottle](https://github.com/genome-in-a-bottle/giab_latest_release), [Synthic Diploid Truth Set](https://github.com/lh3/CHM-eval/releases) ) and plots the accuracy.
 
 #### Requirements/expectations :
  - File of VCF Files
@@ -53,10 +53,10 @@ This optional evaluation and plotting workflow runs a filtering model against tr
  - Plots
 
 ### Software version notes :
-- GATK 4.1 
+- GATK 4.1.4.0 
 - samtools 1.3.1
 - Cromwell version support 
-  - Successfully tested on v37 
+  - Successfully tested on v47 
   - Does not work on versions < v23 due to output syntax
 
 ### Important Note :
@@ -65,7 +65,7 @@ This optional evaluation and plotting workflow runs a filtering model against tr
 - Runtime parameters are optimized for Broad's Google Cloud Platform implementation.
 - For help running workflows on the Google Cloud Platform or locally please
 view the following tutorial [(How to) Execute Workflows from the gatk-workflows Git Organization](https://software.broadinstitute.org/gatk/documentation/article?id=12521).
-- The following material is provided by the GATK Team. Please post any questions or concerns to one of our forum sites : [GATK](https://gatkforums.broadinstitute.org/gatk/categories/ask-the-team/) , [FireCloud](https://gatkforums.broadinstitute.org/firecloud/categories/ask-the-firecloud-team) or [Terra](https://broadinstitute.zendesk.com/hc/en-us/community/topics/360000500432-General-Discussion) , [WDL/Cromwell](https://gatkforums.broadinstitute.org/wdl/categories/ask-the-wdl-team).
+- The following material is provided by the GATK Team. Please post any questions or concerns to one of our forum sites : [GATK](https://gatkforums.broadinstitute.org/gatk/categories/ask-the-team/) , [Terra](https://broadinstitute.zendesk.com/hc/en-us/community/topics/360000500432-General-Discussion) , [WDL/Cromwell](https://gatkforums.broadinstitute.org/wdl/categories/ask-the-wdl-team).
 - Please visit the [User Guide](https://software.broadinstitute.org/gatk/documentation/) site for further documentation on our workflows and tools.
 
 ### LICENSING :
