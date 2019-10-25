@@ -1,36 +1,19 @@
 {
-  "##_COMMENT1": "Input/Output Files", 
-  "HappyWorkflow.vcf_fofn": "File",
+  "HappyWorkflow.vcf_files": [
+    "File",
+    "File"
+  ],
 
-  "##_COMMENT1": "References/Resources",
-  "HappyWorkflow.reference_fasta_index": "File",
-  "HappyWorkflow.reference_fasta": "File",
-  "HappyWorkflow.reference_dict": "File",
+  "HappyWorkflow.truth_bed": "File",
   "HappyWorkflow.truth_vcf": "File",
   "HappyWorkflow.truth_vcf_index": "File",
-  "HappyWorkflow.truth_bed": "File",
+  "HappyWorkflow.reference_fasta_index": "gs://broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai",
+  "HappyWorkflow.reference_fasta": "gs://broad-references/hg38/v0/Homo_sapiens_assembly38.fasta",
+  "HappyWorkflow.reference_dict": "gs://broad-references/hg38/v0/Homo_sapiens_assembly38.dict",
   "HappyWorkflow.rscript": "gs://gatk-best-practices/cnn-h38/happy_plot.R",
-  
-  "##_COMMENT1": "RAM",
-  "#HappyWorkflow.RunHappyPlots.default_ram_mb": "Int (optional, default = 16000)",
-  "#HappyWorkflow.RunHappy.default_ram_mb": "Int (optional, default = 16000)",
 
-  "##_COMMENT1": "Disk Space",
-  "#HappyWorkflow.disk_space": "Int? (optional)",
-  "#HappyWorkflow.RunHappyPlots.default_disk_space_gb": "Int (optional, default = 100)",
-  "#HappyWorkflow.RunHappy.default_disk_space_gb": "Int (optional, default = 100)",
-
-  "##_COMMENT1": "Disk Type",
-  "#HappyWorkflow.RunHappyPlots.use_ssd": "Boolean (optional, default = false)",
-  "#HappyWorkflow.RunHappy.use_ssd": "Boolean (optional, default = false)",
-  
-  "##_COMMENT1": "Memory",
-  "#HappyWorkflow.mem_gb": "Int? (optional)",
-
-  "##_COMMENT1": "CPUs",
-  "#HappyWorkflow.cpu": "Int? (optional)",
-
-  "##_COMMENT1": "Preemptibles",
-  "#HappyWorkflow.preemptible_attempts": "Int? (optional)"
+  "HappyWorkflow.disk_space": "100",
+  "HappyWorkflow.cpu": "2",
+  "HappyWorkflow.mem_gb": "8",
+  "HappyWorkflow.preemptible_attempts": "10"
 }
-
