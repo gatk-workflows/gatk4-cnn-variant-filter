@@ -12,7 +12,7 @@
 
 #import "cnn_variant_common_tasks.wdl" as CNNTasks
 
-import "https://raw.githubusercontent.com/gatk-workflows/gatk4-cnn-variant-filter/dev/tasks/cnn_variant_common_tasks.wdl" as CNNTasks
+import "https://raw.githubusercontent.com/gatk-workflows/gatk4-cnn-variant-filter/1.2.0/tasks/cnn_variant_common_tasks.wdl" as CNNTasks
 
 workflow Cram2FilteredVcf {
     File input_file                  # Aligned CRAM file or Aligned BAM files
