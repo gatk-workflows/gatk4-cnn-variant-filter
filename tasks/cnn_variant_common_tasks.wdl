@@ -1,4 +1,3 @@
-workflow cnn_variant_common_tasks {}
 task CNNScoreVariants {
     File input_vcf
     File input_vcf_index
@@ -132,14 +131,13 @@ task RunHC4 {
 task FilterVariantTranches {
     File input_vcf
     File input_vcf_index
-    File resource_fofn
-    File resource_fofn_index
-    Array[File] resource_files = read_lines(resource_fofn)
-    Array[File] resource_files_index = read_lines(resource_fofn_index)
+    Array[File] resources
+    Array[File] resources_index
     String output_prefix
     String snp_tranches
     String indel_tranches
     String info_key
+    String? extra_args
     File? gatk_override
 
     # Runtime parameters
@@ -168,10 +166,11 @@ command <<<
         FilterVariantTranches \
         -V ${input_vcf} \
         --output ${output_vcf} \
-        -resource ${sep=" -resource " resource_files} \
+        -resource ${sep=" -resource " resources} \
         -info-key ${info_key} \
         ${snp_tranches} \
-        ${indel_tranches}
+        ${indel_tranches} \
+        ${extra_args}
 >>>
 
   runtime {
@@ -235,7 +234,7 @@ task SplitIntervals {
     }
 
     output {
-        Array[File] interval_files = glob("*.intervals")
+        Array[File] interval_files = glob("*.interval_list")
     }
 }
 
@@ -356,4 +355,3 @@ task SamtoolsMergeBAMs {
     disks: "local-disk " + disk_space_gb + " HDD"
   }
 }
-

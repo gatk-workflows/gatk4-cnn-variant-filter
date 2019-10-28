@@ -1,6 +1,8 @@
 # CRAM to trained CNNVariant Model
 
-import "https://raw.githubusercontent.com/gatk-workflows/gatk4-cnn-variant-filter/1.1.0/tasks/cnn_variant_common_tasks.wdl" as CNNTasks
+#import "cnn_variant_common_tasks.wdl" as CNNTasks
+
+import "https://raw.githubusercontent.com/gatk-workflows/gatk4-cnn-variant-filter/1.2.0/tasks/cnn_variant_common_tasks.wdl" as CNNTasks
 
 workflow Cram2TrainedModel {
     File input_cram
@@ -12,7 +14,7 @@ workflow Cram2TrainedModel {
     File truth_bed
     String output_prefix
     String tensor_type
-    Int? epochs
+    Int epochs
     File calling_intervals
     Int scatter_count
     String extra_args
@@ -152,7 +154,6 @@ task WriteTensors {
     Int? disk_space_gb
     Int? cpu
 
-    # You may have to change the following two parameter values depending on the task requirements
     Int default_ram_mb = 8000
 
     # Mem is in units of GB but our command and memory runtime values are in MB
@@ -162,7 +163,7 @@ task WriteTensors {
         set -e
         export GATK_LOCAL_JAR=${default="/root/gatk.jar" gatk_override}
 
-        mkdir "./tensors/"
+        mkdir "/root/tensors/"
 
         gatk --java-options "-Xmx${command_mem}m" \
         CNNVariantWriteTensors \
@@ -171,10 +172,10 @@ task WriteTensors {
         -truth-vcf ${truth_vcf} \
         -truth-bed ${truth_bed} \
         -tensor-type ${tensor_type} \
-        -output-tensor-dir "./tensors/" \
+        -output-tensor-dir "/root/tensors/" \
         -bam-file ${input_bam}
         
-        tar -czf "tensors.tar.gz" "./tensors/"
+        tar -czf "tensors.tar.gz" "/root/tensors/"
     }
 
     output {
@@ -192,8 +193,7 @@ task TrainModel {
     Array[File] tar_tensors
     String output_prefix
     String tensor_type
-    Int? epochs
-    Int set_epochs = select_first([epochs, 100])
+    Int epochs
 
     # Runtime parameters
     String gatk_docker
@@ -203,7 +203,6 @@ task TrainModel {
     Int? disk_space_gb
     Int? cpu
 
-    # You may have to change the following two parameter values depending on the task requirements
     Int default_ram_mb = 8000
 
     # Mem is in units of GB but our command and memory runtime values are in MB
@@ -223,7 +222,7 @@ task TrainModel {
         -model-name ${output_prefix} \
         -image-dir "./" \
         -tensor-type ${tensor_type} \
-        -epochs ${set_epochs}
+        -epochs ${epochs}
     }
 
     output {
