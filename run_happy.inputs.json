@@ -7,9 +7,9 @@
   "HappyWorkflow.truth_bed": "File",
   "HappyWorkflow.truth_vcf": "File",
   "HappyWorkflow.truth_vcf_index": "File",
-  "HappyWorkflow.reference_fasta_index": "gs://broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai",
-  "HappyWorkflow.reference_fasta": "gs://broad-references/hg38/v0/Homo_sapiens_assembly38.fasta",
-  "HappyWorkflow.reference_dict": "gs://broad-references/hg38/v0/Homo_sapiens_assembly38.dict",
+  "HappyWorkflow.reference_fasta_index": "gs://gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai",
+  "HappyWorkflow.reference_fasta": "gs://gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta",
+  "HappyWorkflow.reference_dict": "gs://gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dict",
   "HappyWorkflow.rscript": "gs://gatk-best-practices/cnn-h38/happy_plot.R",
 
   "HappyWorkflow.disk_space": "100",
